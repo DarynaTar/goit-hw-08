@@ -28,7 +28,7 @@ function handleSubmit(event){
     if(email.value && message.value) {
         console.log(`Email: ${email.value}, message: ${message.value}`)  
     } else {
-        alert("Pyfxtybz gecns")
+        alert("Fill in the fields")
     }
 
     localStorage.removeItem('feedback-form-state')
