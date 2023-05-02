@@ -25,9 +25,11 @@ form.addEventListener("submit", handleSubmit);
 function handleSubmit(event){
     event.preventDefault();
     const {elements: {email, message}} = event.currentTarget
-
-    console.log(`Email: ${email.value}, message: ${message.value}`)
-
+    if(email.value && message.value) {
+        console.log(`Email: ${email.value}, message: ${message.value}`)  
+    } else {
+        alert("Pyfxtybz gecns")
+    }
 
     localStorage.removeItem('feedback-form-state')
     // event.currentTarget.reset()
