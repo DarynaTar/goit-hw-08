@@ -11,15 +11,14 @@ function handleInput(event){
     }
 
     localStorage.setItem('feedback-form-state', JSON.stringify(feedbackForm))
+}
 
+function restoreFormState(){
     const savedFeedback = JSON.parse(localStorage.getItem('feedback-form-state'))
 
     if(savedFeedback) {
         form.elements.email.value = savedFeedback.email
         form.elements.message.value = savedFeedback.message
-    } else {
-        form.elements.email.value = ''
-        form.elements.message.value = ''
     }
 }
 
@@ -39,3 +38,5 @@ function handleSubmit(event){
         alert("Fill in the fields")
     }
 }
+
+restoreFormState();
