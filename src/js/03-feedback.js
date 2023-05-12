@@ -29,7 +29,12 @@ function handleSubmit(event){
     const {elements: {email, message}} = event.currentTarget
 
     if(email.value && message.value) {
-        console.log(`Email: ${email.value}, message: ${message.value}`)
+        const feedback = {
+            email: email.value,
+            message: message.value
+        }
+        console.log(feedback);
+        // console.table(feedback);
         localStorage.removeItem('feedback-form-state')
         email.value = '';
         message.value = '';
